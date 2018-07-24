@@ -1,0 +1,113 @@
+footer.footer
+    .row
+        .columns.small-5.medium-3.large-3
+            - var values = ['О нас', 'Услуги', 'НОВОСТИ', 'Полезная информация', 'КОНТАКТЫ'];
+            ul.menu.menu-white.footer_menu
+                each val in values
+                    li.menu_item
+                        a(href='#')= val
+                li.menu_btn.hidden-small
+                    a(href='#')
+                        | скачать брошюру
+        .columns.small-12.medium-4.large-3.large-offset-1
+            .footer_block
+                .title_footer ГОЛОВНОЙ ОФИС:
+                p
+                    | 220000, Республика Беларусь, г. Гродно, ул. Советская, 100
+
+            .carousel_contacts.owl-carousel.owl-theme
+                .footer_block
+                    p
+                        span Телефон:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span Факс:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span E-mail:
+                        a(href='mailto:info@belyavskii.com') info@belyavskii.com
+                .footer_block
+                    p
+                        span Телефон:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span Факс:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span E-mail:
+                        a(href='mailto:info@belyavskii.com') info@belyavskii.com
+                .footer_block
+                    p
+                        span Телефон:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span Факс:
+                        a(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                    p
+                        span E-mail:
+                        a(href='mailto:info@belyavskii.com') info@belyavskii.com
+        .columns.small-7.medium-5.large-4.large-offset-1
+            .footer_block.flex.align-middle.column-small
+                a.contacts_phone(href='tel:+375 (152) 967-004') +375 (152) 967-004
+                a.btn.btn_border.btn_color-yellow.btn_size-medium.hidden-medium.hidden-small
+                    span Заказать звонок
+                a.contacts_callback.align-right.hidden-medium.hidden-large(href='#')
+                    i.i-icon
+                    span Заказать звонок
+            .footer_block.flex.align-middle.align-right
+                .social
+                    mixin social(html,img)
+                        a.social_item(href=html,target='_blank')
+                            i(class=img)
+                    +social('https://facebook.com', 'i-facebook')
+                    +social('https://vk.com', 'i-vk')
+                    +social('https://twitter.com', 'i-twitter')
+            .footer_block.hidden-small
+                .copirate
+                    | ООО «Экономические споры", Лицензия на право осуществления деятельности по оказанию юридических услуг № *****/****, выдана на основании решения Министерства юстиции Республики Беларусь от **.**.2018. №***.         
+    .row
+        .columns.small-12.medium-3.large-3
+            .footer_abiatec Разработка сайта:
+                a(href='http://abiatec.by/', target='_blank')
+                    img(src="templates/_ares/img/svg/abiatec.svg", alt="")
+        .columns.small-12.medium-4.large-3.large-offset-1
+            a.link.footer_link.hidden-small(href='#', download)
+                i.i-save
+                span Скачать vCard
+            .copirate.footer_link.hidden-medium.hidden-large
+                | ООО «Экономические споры", Лицензия на право осуществления деятельности по оказанию юридических услуг № *****/****, выдана на основании решения Министерства юстиции Республики Беларусь от **.**.2018. №***.   
+        .columns.small-12.medium-5.large-4.large-offset-1
+            span.footer_link.align-right © ОАО Экономические споры
+.fixed_btn
+    a(title='Бесплатная консультация')
+        i.i-stateman
+
+.overlay
+    .modal.patern
+        a.modal_close
+            i.i-close
+        .modal_content.form_area
+            .title.title_size-medium.text-center Бесплатная консультация
+            hr.hr.hr-mini.hr-gold(noshade)
+            form.form(action="#", data-abide, novalidate)
+                .form_item
+                    input(type="text", name="", placeholder="ФИО*", required)
+                    span.form-error 
+                        i.i-error
+                .form_item
+                    input(type="text", name="", placeholder="Название компании*", required)
+                    span.form-error 
+                        i.i-error
+                .form_item
+                    input(type="text", name="", placeholder="Телефон*", required)
+                    span.form-error 
+                        i.i-error
+                .form_item
+                    input(type="text", name="", placeholder="e-mail*", required)
+                    span.form-error 
+                        i.i-error
+                .form_item
+                    textarea(name="", placeholder="Сообщение")
+                .form_item
+                    button.btn.btn_border.btn_color-yellow.btn_size-medium(type="submit")
+                        span получить консультацию

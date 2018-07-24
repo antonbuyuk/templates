@@ -1,0 +1,33 @@
+.form_area
+    for form in formBlock
+        .title.title_size-medium.text-center=form.titleForm
+        hr.hr.hr-mini.hr-gold(noshade)
+        form.form(action="#", data-abide, novalidate)
+            .row
+                for item in form.formItems
+                    .columns(class="small-" + item.col + "")
+                        .form_item
+                            input(type="text", name="", placeholder=item.inpt, required)
+                            span.form-error 
+                                i.i-error
+            if form.textarea
+                .row
+                    .columns.small-12
+                        .form_item
+                            textarea(name="", placeholder="Сообщение")
+            else 
+                
+            if form.file
+                .row
+                    .columns.small-12
+                        .form_item.form_item-upload
+                            i.i-attachment
+                            input(type="file", name="uploadfile", )
+                            div Прикрепить резюме
+            else 
+
+            .row
+                .columns.small-12
+                    .form_item
+                        button.btn.btn_border.btn_color-yellow.btn_size-medium(type="submit")
+                            span=form.btnForm

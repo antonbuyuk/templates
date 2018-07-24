@@ -1,0 +1,10 @@
+.accardion_list(data-accordion, data-allow-all-closed='true')
+    for item in accardionsItems
+        .accardion_item(data-accordion-item)
+            a.accardion_header(href='#')=item.title
+                .accardion_status
+            .accardion_content(data-tab-content)
+                p
+                    b=item.content
+                p=item.content
+                p=item.content
